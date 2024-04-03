@@ -1,4 +1,4 @@
-# Example Mod
+# Treasure Reforging
 
 TBA...
 
