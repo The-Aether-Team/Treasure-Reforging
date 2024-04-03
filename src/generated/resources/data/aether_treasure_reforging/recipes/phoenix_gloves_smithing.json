@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "aether_treasure_reforging:pyral_ingot"
+  },
+  "base": {
+    "item": "aether:gravitite_gloves"
+  },
+  "result": {
+    "item": "aether:phoenix_gloves"
+  },
+  "template": {
+    "item": "aether_treasure_reforging:phoenix_upgrade_smithing_template"
+  }
+}

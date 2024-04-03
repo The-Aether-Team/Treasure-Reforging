@@ -1,0 +1,9 @@
+{
+  "asset_name": "phoenix",
+  "description": {
+    "color": "#FF961B",
+    "translate": "trim_material.aether_treasure_reforging.phoenix"
+  },
+  "ingredient": "aether_treasure_reforging:pyral_ingot",
+  "item_model_index": 0.5
+}

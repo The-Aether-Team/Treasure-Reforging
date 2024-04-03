@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "aether_treasure_reforging:valkyrie_axe_smithing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_valkyrum_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "aether_treasure_reforging:valkyrum_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_valkyrum_ingot",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "aether_treasure_reforging:valkyrie_axe_smithing"
+    ]
+  },
+  "sends_telemetry_event": false
+}

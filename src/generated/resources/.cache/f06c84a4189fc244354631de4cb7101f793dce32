@@ -1,0 +1,9 @@
+// 1.20.1	2024-04-03T14:59:02.5069807	Tags for minecraft:item mod id aether_treasure_reforging
+1ca0f81b9885471546b3339b2c4ee57c28fadbb7 data/aether/tags/items/bronze_dungeon_loot.json
+9bbc395be1e0fcbc79db61b5337d6276f5862a95 data/aether/tags/items/gold_dungeon_loot.json
+989fd49560d0a99893b1777664e1b3129451d178 data/aether/tags/items/neptune_repairing.json
+9a260077868d271ebc51a5b88f37cf770cae4e67 data/aether/tags/items/phoenix_repairing.json
+5aca61b6d31bd6354cc1e50a0996544318909701 data/aether/tags/items/silver_dungeon_loot.json
+b2f08fa5ef2315a7b7042be49433493859d80cca data/aether/tags/items/valkyrie_repairing.json
+faf78a31e235c4f5ee080022e6a35af0d571f52d data/minecraft/tags/items/beacon_payment_items.json
+faf78a31e235c4f5ee080022e6a35af0d571f52d data/minecraft/tags/items/trim_materials.json

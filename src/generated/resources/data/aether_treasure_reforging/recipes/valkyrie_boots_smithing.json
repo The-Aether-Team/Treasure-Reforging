@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "aether_treasure_reforging:valkyrum_ingot"
+  },
+  "base": {
+    "item": "aether:gravitite_boots"
+  },
+  "result": {
+    "item": "aether:valkyrie_boots"
+  },
+  "template": {
+    "item": "aether_treasure_reforging:valkyrie_upgrade_smithing_template"
+  }
+}
