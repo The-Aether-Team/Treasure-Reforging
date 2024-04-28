@@ -1,13 +1,16 @@
 package com.aetherteam.treasurereforging.data.generators.tags;
 
 import com.aetherteam.aether.AetherTags;
+import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.treasurereforging.TreasureReforging;
+import com.aetherteam.treasurereforging.block.ReforgingBlocks;
 import com.aetherteam.treasurereforging.item.ReforgingItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 import javax.annotation.Nullable;
@@ -26,6 +29,10 @@ public class ReforgingItemTagData extends ItemTagsProvider {
         this.tag(AetherTags.Items.BRONZE_DUNGEON_LOOT).add(ReforgingItems.NEPTUNE_UPGRADE_SMITHING_TEMPLATE.get());
         this.tag(AetherTags.Items.SILVER_DUNGEON_LOOT).add(ReforgingItems.VALKYRIE_UPGRADE_SMITHING_TEMPLATE.get());
         this.tag(AetherTags.Items.GOLD_DUNGEON_LOOT).add(ReforgingItems.PHOENIX_UPGRADE_SMITHING_TEMPLATE.get());
+
+        this.tag(Tags.Items.STORAGE_BLOCKS).add(
+                ReforgingBlocks.VALKYRUM_BLOCK.get().asItem(),
+                ReforgingBlocks.PYRAL_BLOCK.get().asItem());
 
         this.tag(ItemTags.BEACON_PAYMENT_ITEMS).add(
                 ReforgingItems.NEPTUNE_MESH.get(),

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "valkyrum_ingot",
+  "ingredients": [
+    {
+      "item": "aether_treasure_reforging:valkyrum_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "aether_treasure_reforging:valkyrum_ingot"
+  }
+}

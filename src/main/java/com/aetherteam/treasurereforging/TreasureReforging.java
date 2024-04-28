@@ -1,5 +1,6 @@
 package com.aetherteam.treasurereforging;
 
+import com.aetherteam.treasurereforging.block.ReforgingBlocks;
 import com.aetherteam.treasurereforging.data.ReforgingData;
 import com.aetherteam.treasurereforging.item.ReforgingItems;
 import com.mojang.logging.LogUtils;
@@ -19,6 +20,7 @@ public class TreasureReforging {
         modEventBus.addListener(ReforgingData::dataSetup);
 
         DeferredRegister<?>[] registers = {
+                ReforgingBlocks.BLOCKS,
                 ReforgingItems.ITEMS
         };
 

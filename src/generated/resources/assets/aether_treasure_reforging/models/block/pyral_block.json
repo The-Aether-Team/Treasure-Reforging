@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "aether_treasure_reforging:block/construction/pyral_block"
+  }
+}

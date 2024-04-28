@@ -1,8 +1,11 @@
 package com.aetherteam.treasurereforging.data.generators.tags;
 
 import com.aetherteam.treasurereforging.TreasureReforging;
+import com.aetherteam.treasurereforging.block.ReforgingBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.tags.BlockTags;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -16,6 +19,12 @@ public class ReforgingBlockTagData extends BlockTagsProvider {
 
     @Override
     public void addTags(HolderLookup.Provider provider) {
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
+                ReforgingBlocks.VALKYRUM_BLOCK.get(),
+                ReforgingBlocks.PYRAL_BLOCK.get());
 
+        this.tag(Tags.Blocks.STORAGE_BLOCKS).add(
+                ReforgingBlocks.VALKYRUM_BLOCK.get(),
+                ReforgingBlocks.PYRAL_BLOCK.get());
     }
 }

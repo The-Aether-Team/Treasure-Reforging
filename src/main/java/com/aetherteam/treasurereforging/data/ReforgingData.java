@@ -1,5 +1,6 @@
 package com.aetherteam.treasurereforging.data;
 
+import com.aetherteam.aether.data.generators.AetherBlockStateData;
 import com.aetherteam.treasurereforging.data.generators.*;
 import com.aetherteam.treasurereforging.data.generators.tags.ReforgingBlockTagData;
 import com.aetherteam.treasurereforging.data.generators.tags.ReforgingItemTagData;
@@ -25,6 +26,7 @@ public class ReforgingData {
         PackOutput packOutput = generator.getPackOutput();
 
         // Client Data
+        generator.addProvider(event.includeClient(), new ReforgingBlockStateData(packOutput, fileHelper));
         generator.addProvider(event.includeClient(), new ReforgingItemModelData(packOutput, fileHelper));
         generator.addProvider(event.includeClient(), new ReforgingLanguageData(packOutput));
 

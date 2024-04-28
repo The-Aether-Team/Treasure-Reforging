@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "aether_treasure_reforging:block/valkyrum_block",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "aether_treasure_reforging:block/valkyrum_block_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "aether_treasure_reforging:block/valkyrum_block_horizontal",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "aether_treasure_reforging:block/valkyrum_block_horizontal",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "aether_treasure_reforging:block/valkyrum_block"
+    },
+    "facing=west": {
+      "model": "aether_treasure_reforging:block/valkyrum_block_horizontal",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

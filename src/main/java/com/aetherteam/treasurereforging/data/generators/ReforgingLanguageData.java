@@ -1,5 +1,6 @@
 package com.aetherteam.treasurereforging.data.generators;
 
+import com.aetherteam.treasurereforging.block.ReforgingBlocks;
 import com.aetherteam.treasurereforging.data.providers.ReforgingLanguageProvider;
 import com.aetherteam.treasurereforging.item.ReforgingItems;
 import net.minecraft.data.PackOutput;
@@ -11,6 +12,9 @@ public class ReforgingLanguageData extends ReforgingLanguageProvider {
 
     @Override
     protected void addTranslations() {
+        this.addBlock(ReforgingBlocks.VALKYRUM_BLOCK, "Block of Valkyrum");
+        this.addBlock(ReforgingBlocks.PYRAL_BLOCK, "Block of Pyral");
+
         this.addItem(ReforgingItems.NEPTUNE_MESH, "Neptune Mesh");
         this.addItem(ReforgingItems.VALKYRUM_INGOT, "Valkyrum Ingot");
         this.addItem(ReforgingItems.PYRAL_INGOT, "Pyral Ingot");

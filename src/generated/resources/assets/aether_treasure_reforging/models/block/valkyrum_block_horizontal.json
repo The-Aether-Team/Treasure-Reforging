@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "aether_treasure_reforging:block/construction/valkyrum_block_top",
+    "side": "aether_treasure_reforging:block/construction/valkyrum_block"
+  }
+}

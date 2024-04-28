@@ -2,6 +2,7 @@ package com.aetherteam.treasurereforging.data.generators;
 
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.item.AetherItems;
+import com.aetherteam.treasurereforging.block.ReforgingBlocks;
 import com.aetherteam.treasurereforging.data.providers.ReforgingRecipeProvider;
 import com.aetherteam.treasurereforging.item.ReforgingItems;
 import net.minecraft.data.PackOutput;
@@ -20,6 +21,9 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
+        this.oreBlockStorageRecipesRecipesWithCustomUnpacking(consumer, RecipeCategory.MISC, ReforgingItems.VALKYRUM_INGOT.get(), RecipeCategory.BUILDING_BLOCKS, ReforgingBlocks.VALKYRUM_BLOCK.get(), "valkyrum_ingot_from_valkyrum_block", "valkyrum_ingot");
+        this.oreBlockStorageRecipesRecipesWithCustomUnpacking(consumer, RecipeCategory.MISC, ReforgingItems.PYRAL_INGOT.get(), RecipeCategory.BUILDING_BLOCKS, ReforgingBlocks.PYRAL_BLOCK.get(), "pyral_ingot_from_pyral_block", "pyral_ingot");
+
         this.copyDungeonSmithingTemplate(consumer, ReforgingItems.NEPTUNE_UPGRADE_SMITHING_TEMPLATE.get(), AetherBlocks.CARVED_STONE.get());
         this.copyDungeonSmithingTemplate(consumer, ReforgingItems.VALKYRIE_UPGRADE_SMITHING_TEMPLATE.get(), AetherBlocks.ANGELIC_STONE.get());
         this.copyDungeonSmithingTemplate(consumer, ReforgingItems.PHOENIX_UPGRADE_SMITHING_TEMPLATE.get(), AetherBlocks.HELLFIRE_STONE.get());
