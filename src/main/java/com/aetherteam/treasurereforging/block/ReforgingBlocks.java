@@ -37,7 +37,11 @@ public class ReforgingBlocks {
     private static <B extends Block> Supplier<BlockItem> registerBlockItem(final RegistryObject<B> blockRegistryObject) {
         return () -> {
             B block = Objects.requireNonNull(blockRegistryObject.get());
-            return new BlockItem(block, new Item.Properties());
+            if (block == PYRAL_BLOCK.get()) {
+                return new BlockItem(block, new Item.Properties().fireResistant());
+            } else {
+                return new BlockItem(block, new Item.Properties());
+            }
         };
     }
 }
