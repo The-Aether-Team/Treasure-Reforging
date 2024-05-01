@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "pyral_scrap_from_smelting",
+  "ingredient": {
+    "item": "aether:sun_altar"
+  },
+  "result": "aether_treasure_reforging:pyral_scrap"
+}

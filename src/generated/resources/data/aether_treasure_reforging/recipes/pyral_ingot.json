@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "aether_treasure_reforging:pyral_scrap"
+    },
+    {
+      "item": "aether_treasure_reforging:pyral_scrap"
+    },
+    {
+      "item": "aether_treasure_reforging:pyral_scrap"
+    },
+    {
+      "item": "aether_treasure_reforging:pyral_scrap"
+    },
+    {
+      "item": "aether_treasure_reforging:pyral_scrap"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:obsidian"
+    }
+  ],
+  "result": {
+    "item": "aether_treasure_reforging:pyral_ingot"
+  }
+}

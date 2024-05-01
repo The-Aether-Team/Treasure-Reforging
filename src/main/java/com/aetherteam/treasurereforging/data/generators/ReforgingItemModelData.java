@@ -1,6 +1,5 @@
 package com.aetherteam.treasurereforging.data.generators;
 
-import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.nitrogen.data.providers.NitrogenItemModelProvider;
 import com.aetherteam.treasurereforging.TreasureReforging;
 import com.aetherteam.treasurereforging.block.ReforgingBlocks;
@@ -17,6 +16,7 @@ public class ReforgingItemModelData extends NitrogenItemModelProvider {
     protected void registerModels() {
         this.item(ReforgingItems.NEPTUNE_MESH.get(), "materials/");
         this.item(ReforgingItems.VALKYRUM_INGOT.get(), "materials/");
+        this.item(ReforgingItems.PYRAL_SCRAP.get(), "materials/");
         this.item(ReforgingItems.PYRAL_INGOT.get(), "materials/");
         this.item(ReforgingItems.NEPTUNE_UPGRADE_SMITHING_TEMPLATE.get(), "upgrades/");
         this.item(ReforgingItems.VALKYRIE_UPGRADE_SMITHING_TEMPLATE.get(), "upgrades/");
