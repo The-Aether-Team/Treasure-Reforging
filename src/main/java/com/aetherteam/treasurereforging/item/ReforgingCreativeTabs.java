@@ -29,8 +29,8 @@ public class ReforgingCreativeTabs {
         if (tab == AetherCreativeTabs.AETHER_INGREDIENTS.getKey()) {
             event.getEntries().putAfter(new ItemStack(AetherBlocks.ENCHANTED_GRAVITITE.get()), new ItemStack(ReforgingItems.NEPTUNE_MESH.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(ReforgingItems.NEPTUNE_MESH.get()), new ItemStack(ReforgingItems.VALKYRUM_INGOT.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(ReforgingItems.VALKYRUM_INGOT.get()), new ItemStack(ReforgingItems.PYRAL_SCRAP.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(ReforgingItems.PYRAL_SCRAP.get()), new ItemStack(ReforgingItems.PYRAL_INGOT.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(ReforgingItems.VALKYRUM_INGOT.get()), new ItemStack(ReforgingItems.PYRAL_SHARD.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(ReforgingItems.PYRAL_SHARD.get()), new ItemStack(ReforgingItems.PYRAL_INGOT.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
     }
 }

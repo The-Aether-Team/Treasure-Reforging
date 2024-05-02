@@ -7,7 +7,6 @@ import com.aetherteam.treasurereforging.data.providers.ReforgingRecipeProvider;
 import com.aetherteam.treasurereforging.item.ReforgingItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 
@@ -21,9 +20,9 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ReforgingItems.PYRAL_INGOT.get())
-                .requires(ReforgingItems.PYRAL_SCRAP.get(), 5)
+                .requires(ReforgingItems.PYRAL_SHARD.get(), 4)
                 .requires(Blocks.OBSIDIAN, 2)
-                .unlockedBy("has_pyral_scrap", has(ReforgingItems.PYRAL_SCRAP.get()))
+                .unlockedBy("has_pyral_shard", has(ReforgingItems.PYRAL_SHARD.get()))
                 .save(consumer);
 
         this.oreBlockStorageRecipesRecipesWithCustomUnpacking(consumer, RecipeCategory.MISC, ReforgingItems.VALKYRUM_INGOT.get(), RecipeCategory.BUILDING_BLOCKS, ReforgingBlocks.VALKYRUM_BLOCK.get(), "valkyrum_ingot_from_valkyrum_block", "valkyrum_ingot");
@@ -81,12 +80,12 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
         SimpleCookingRecipeBuilder.smelting(
                         Ingredient.of(AetherBlocks.SUN_ALTAR.get()),
                         RecipeCategory.MISC,
-                        ReforgingItems.PYRAL_SCRAP.get(),
+                        ReforgingItems.PYRAL_SHARD.get(),
                         0.1F,
                         200)
                 .unlockedBy("has_sun_altar", has(AetherBlocks.SUN_ALTAR.get()))
-                .group(getSmeltingRecipeName(ReforgingItems.PYRAL_SCRAP.get()))
-                .save(consumer, this.name(getSmeltingRecipeName(ReforgingItems.PYRAL_SCRAP.get())));
+                .group(getSmeltingRecipeName(ReforgingItems.PYRAL_SHARD.get()))
+                .save(consumer, this.name(getSmeltingRecipeName(ReforgingItems.PYRAL_SHARD.get())));
 
         SmithingTransformRecipeBuilder.smithing(
                     Ingredient.of(ReforgingItems.NEPTUNE_UPGRADE_SMITHING_TEMPLATE.get()),

@@ -3,19 +3,16 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "aether_treasure_reforging:pyral_scrap"
+      "item": "aether_treasure_reforging:pyral_shard"
     },
     {
-      "item": "aether_treasure_reforging:pyral_scrap"
+      "item": "aether_treasure_reforging:pyral_shard"
     },
     {
-      "item": "aether_treasure_reforging:pyral_scrap"
+      "item": "aether_treasure_reforging:pyral_shard"
     },
     {
-      "item": "aether_treasure_reforging:pyral_scrap"
-    },
-    {
-      "item": "aether_treasure_reforging:pyral_scrap"
+      "item": "aether_treasure_reforging:pyral_shard"
     },
     {
       "item": "minecraft:obsidian"

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_pyral_scrap": {
+    "has_pyral_shard": {
       "conditions": {
         "items": [
           {
             "items": [
-              "aether_treasure_reforging:pyral_scrap"
+              "aether_treasure_reforging:pyral_shard"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_pyral_scrap",
+      "has_pyral_shard",
       "has_the_recipe"
     ]
   ],

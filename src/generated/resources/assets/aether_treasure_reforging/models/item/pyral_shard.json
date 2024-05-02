@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "aether_treasure_reforging:item/materials/pyral_shard"
+  }
+}

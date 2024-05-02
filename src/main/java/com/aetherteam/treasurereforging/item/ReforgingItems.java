@@ -63,7 +63,7 @@ public class ReforgingItems {
 
     public static final RegistryObject<Item> NEPTUNE_MESH = ITEMS.register("neptune_mesh", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> VALKYRUM_INGOT = ITEMS.register("valkyrum_ingot", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> PYRAL_SCRAP = ITEMS.register("pyral_scrap", () -> new Item(new Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> PYRAL_SHARD = ITEMS.register("pyral_shard", () -> new Item(new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> PYRAL_INGOT = ITEMS.register("pyral_ingot", () -> new Item(new Item.Properties().fireResistant()));
 
     public static final RegistryObject<Item> NEPTUNE_UPGRADE_SMITHING_TEMPLATE = ITEMS.register("neptune_upgrade_smithing_template", ReforgingItems::createNeptuneUpgradeTemplate);
