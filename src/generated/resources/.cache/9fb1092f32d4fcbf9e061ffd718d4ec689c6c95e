@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-02T09:57:48.1825413	Recipes
+// 1.20.1	2024-05-02T12:50:48.4341837	Recipes
 3b3a507c8357d505bcc65d889dd1d5583807b12a data/aether_treasure_reforging/advancements/recipes/building_blocks/pyral_block.json
 7df12ab085a412e2e918ac83f282f372d1b0a610 data/aether_treasure_reforging/advancements/recipes/building_blocks/valkyrum_block.json
 8c408ceb27a9fc8459ebe35db3eb9a6beb1fbaf1 data/aether_treasure_reforging/advancements/recipes/combat/neptune_boots_smithing.json
@@ -63,3 +63,4 @@ ca9577f61fb66b6ec18c8262cc5b211dce7d0ad4 data/aether_treasure_reforging/recipes/
 76f429585a5d108e65a191d5cca6f06ddc57969c data/aether_treasure_reforging/recipes/valkyrum_block.json
 117b6f776532078d1e4349a3522084d62f5a8b91 data/aether_treasure_reforging/recipes/valkyrum_ingot_from_smelting.json
 1bab749c4f73691aed0292ab04c50812858d1b0e data/aether_treasure_reforging/recipes/valkyrum_ingot_from_valkyrum_block.json
+ca9d34d2bb060f4305152b09c8f4611afdbb5820 data/minecraft/recipes/phoenix_armor_reigniting.json

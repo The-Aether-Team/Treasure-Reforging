@@ -1,7 +1,6 @@
 package com.aetherteam.treasurereforging.data.generators.tags;
 
 import com.aetherteam.aether.AetherTags;
-import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.treasurereforging.TreasureReforging;
 import com.aetherteam.treasurereforging.block.ReforgingBlocks;
 import com.aetherteam.treasurereforging.item.ReforgingItems;

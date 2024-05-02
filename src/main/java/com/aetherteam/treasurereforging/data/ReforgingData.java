@@ -1,6 +1,5 @@
 package com.aetherteam.treasurereforging.data;
 
-import com.aetherteam.aether.data.generators.AetherBlockStateData;
 import com.aetherteam.treasurereforging.data.generators.*;
 import com.aetherteam.treasurereforging.data.generators.tags.ReforgingBlockTagData;
 import com.aetherteam.treasurereforging.data.generators.tags.ReforgingItemTagData;

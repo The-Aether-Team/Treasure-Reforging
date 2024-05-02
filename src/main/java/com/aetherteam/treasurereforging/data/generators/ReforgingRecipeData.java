@@ -5,6 +5,7 @@ import com.aetherteam.aether.item.AetherItems;
 import com.aetherteam.treasurereforging.block.ReforgingBlocks;
 import com.aetherteam.treasurereforging.data.providers.ReforgingRecipeProvider;
 import com.aetherteam.treasurereforging.item.ReforgingItems;
+import com.aetherteam.treasurereforging.recipe.TreasureReforgingRecipeSerializers;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -24,6 +25,8 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                 .requires(Blocks.OBSIDIAN, 2)
                 .unlockedBy("has_pyral_shard", has(ReforgingItems.PYRAL_SHARD.get()))
                 .save(consumer);
+
+        SpecialRecipeBuilder.special(TreasureReforgingRecipeSerializers.PHOENIX_ARMOR.get()).save(consumer, "phoenix_armor_reigniting");
 
         this.oreBlockStorageRecipesRecipesWithCustomUnpacking(consumer, RecipeCategory.MISC, ReforgingItems.VALKYRUM_INGOT.get(), RecipeCategory.BUILDING_BLOCKS, ReforgingBlocks.VALKYRUM_BLOCK.get(), "valkyrum_ingot_from_valkyrum_block", "valkyrum_ingot");
         this.oreBlockStorageRecipesRecipesWithCustomUnpacking(consumer, RecipeCategory.MISC, ReforgingItems.PYRAL_INGOT.get(), RecipeCategory.BUILDING_BLOCKS, ReforgingBlocks.PYRAL_BLOCK.get(), "pyral_ingot_from_pyral_block", "pyral_ingot");

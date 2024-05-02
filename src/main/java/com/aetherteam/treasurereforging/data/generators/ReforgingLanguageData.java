@@ -42,6 +42,16 @@ public class ReforgingLanguageData extends ReforgingLanguageProvider {
         this.addSmithingTemplateDescription("phoenix_upgrade", "base_slot_description", "Add a piece of gravitite armor");
         this.addSmithingTemplateDescription("phoenix_upgrade", "ingredients", "Pyral Ingot");
 
+        this.addLore(ReforgingItems.NEPTUNE_MESH, "A mesh of interwoven blue metallic links. With the respective template, it can be used in a Smithing Table to forge Neptune armor.");
+        this.addLore(ReforgingItems.VALKYRUM_INGOT, "A rare metal utilized by the Valkyries. With the respective template, it can be used in a Smithing Table to forge Valkyrie equipment.");
+        this.addLore(ReforgingItems.PYRAL_SHARD, "When combined with obsidian, fragments of Pyral material can be used to craft Pyral Ingots. The shard can also function as a long-lasting fuel.");
+        this.addLore(ReforgingItems.PYRAL_INGOT, "A hardened and fire-resistant ingot. With the respective template, it can be used in a Smithing Table to forge Phoenix armor.");
+        this.addLore(ReforgingBlocks.VALKYRUM_BLOCK, "A solid block made from Valkyrum Ingots. They can power beacons and be used as decorative accenting.");
+        this.addLore(ReforgingBlocks.PYRAL_BLOCK, "A solid block made from Pyral Ingots. They can power beacons and have a fiery look to them.");
+        this.addLoreUnique("item.aether_treasure_reforging." + ReforgingItems.NEPTUNE_UPGRADE_SMITHING_TEMPLATE.getKey().location().getPath(), "A smithing template that can be used in the creation of Neptune Armor, using both Neptune Mesh and Zanite Armor.");
+        this.addLoreUnique("item.aether_treasure_reforging." + ReforgingItems.VALKYRIE_UPGRADE_SMITHING_TEMPLATE.getKey().location().getPath(), "A smithing template that can be used in the creation of Valkyrie equipment, using both Valkyrum Ingots and Gravitite equipment.");
+        this.addLoreUnique("item.aether_treasure_reforging." + ReforgingItems.PHOENIX_UPGRADE_SMITHING_TEMPLATE.getKey().location().getPath(), "A smithing template that can be used in the creation of Phoenix Armor, using both Pyral Ingots and Gravitite Armor.");
+
         this.addPackDescription("mod", "The Aether: Treasure Reforging Resources");
     }
 }

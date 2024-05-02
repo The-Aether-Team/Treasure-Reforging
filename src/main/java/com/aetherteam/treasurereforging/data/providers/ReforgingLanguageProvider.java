@@ -1,10 +1,10 @@
 package com.aetherteam.treasurereforging.data.providers;
 
-import com.aetherteam.nitrogen.data.providers.NitrogenLanguageProvider;
+import com.aetherteam.aether.data.providers.AetherLanguageProvider;
 import com.aetherteam.treasurereforging.TreasureReforging;
 import net.minecraft.data.PackOutput;
 
-public abstract class ReforgingLanguageProvider extends NitrogenLanguageProvider {
+public abstract class ReforgingLanguageProvider extends AetherLanguageProvider {
     public ReforgingLanguageProvider(PackOutput output) {
         super(output, TreasureReforging.MODID);
     }
