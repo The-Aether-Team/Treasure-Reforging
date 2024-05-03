@@ -11,7 +11,7 @@ plugins {
 }
 
 version = "${mc_version}-${mod_version}-neoforge"
-group = 'com.aetherteam.treasurereforging'
+group = 'com.aetherteam.treasur_ereforging'
 
 base {
     archivesName = mod_id
