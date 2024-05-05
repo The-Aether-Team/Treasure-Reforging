@@ -26,7 +26,7 @@ public class ReforgingTrimMaterials {
 
     public static void bootstrap(BootstapContext<TrimMaterial> context) {
         register(context, NEPTUNE, ReforgingItems.NEPTUNE_MESH.get(), Style.EMPTY.withColor(4091864), 0.9F);
-        register(context, VALKYRIE, ReforgingItems.VALKYRUM_INGOT.get().asItem(), Style.EMPTY.withColor(16643423), 0.6F);
+        register(context, VALKYRIE, ReforgingItems.VALKYRUM_INGOT.get().asItem(), Style.EMPTY.withColor(13886178), 0.2F);
         register(context, PHOENIX, ReforgingItems.PYRAL_INGOT.get().asItem(), Style.EMPTY.withColor(16750107), 0.5F);
     }
 
