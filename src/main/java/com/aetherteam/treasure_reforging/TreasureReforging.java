@@ -1,7 +1,6 @@
 package com.aetherteam.treasure_reforging;
 
 import com.aetherteam.treasure_reforging.block.ReforgingBlocks;
-import com.aetherteam.treasure_reforging.data.ReforgingData;
 import com.aetherteam.treasure_reforging.item.ReforgingItems;
 import com.aetherteam.treasure_reforging.recipe.TreasureReforgingRecipeSerializers;
 import com.mojang.logging.LogUtils;
@@ -18,7 +17,7 @@ public class TreasureReforging {
 
     public TreasureReforging() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        modEventBus.addListener(ReforgingData::dataSetup);
+//        modEventBus.addListener(ReforgingData::dataSetup);
 
         DeferredRegister<?>[] registers = {
                 ReforgingBlocks.BLOCKS,

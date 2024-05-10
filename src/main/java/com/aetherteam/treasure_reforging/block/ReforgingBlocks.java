@@ -2,6 +2,7 @@ package com.aetherteam.treasure_reforging.block;
 
 import com.aetherteam.aether.Aether;
 import com.aetherteam.aether.block.miscellaneous.FacingPillarBlock;
+import com.aetherteam.aether.item.AetherCreativeTabs;
 import com.aetherteam.treasure_reforging.item.ReforgingItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -38,9 +39,9 @@ public class ReforgingBlocks {
         return () -> {
             B block = Objects.requireNonNull(blockRegistryObject.get());
             if (block == PYRAL_BLOCK.get()) {
-                return new BlockItem(block, new Item.Properties().fireResistant());
+                return new BlockItem(block, new Item.Properties().fireResistant().tab(AetherCreativeTabs.AETHER_BLOCKS));
             } else {
-                return new BlockItem(block, new Item.Properties());
+                return new BlockItem(block, new Item.Properties().tab(AetherCreativeTabs.AETHER_BLOCKS));
             }
         };
     }

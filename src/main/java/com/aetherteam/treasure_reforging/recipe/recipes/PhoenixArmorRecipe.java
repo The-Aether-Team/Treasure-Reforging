@@ -3,12 +3,10 @@ package com.aetherteam.treasure_reforging.recipe.recipes;
 import com.aetherteam.aether.item.AetherItems;
 import com.aetherteam.treasure_reforging.item.ReforgingItems;
 import com.aetherteam.treasure_reforging.recipe.TreasureReforgingRecipeSerializers;
-import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.CraftingBookCategory;
 import net.minecraft.world.item.crafting.CustomRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -28,8 +26,8 @@ public class PhoenixArmorRecipe extends CustomRecipe {
     ));
     private static final Ingredient SHARD_INGREDIENT = Ingredient.of(ReforgingItems.PYRAL_SHARD.get());
 
-    public PhoenixArmorRecipe(ResourceLocation id, CraftingBookCategory category) {
-        super(id, category);
+    public PhoenixArmorRecipe(ResourceLocation id) {
+        super(id);
     }
 
     @Override
@@ -50,7 +48,7 @@ public class PhoenixArmorRecipe extends CustomRecipe {
     }
 
     @Override
-    public ItemStack assemble(CraftingContainer container, RegistryAccess registryAccess) {
+    public ItemStack assemble(CraftingContainer container) {
         ItemStack result = ItemStack.EMPTY;
         for (int i = 0; i < container.getContainerSize(); ++i) {
             ItemStack item = container.getItem(i);
