@@ -1,6 +1,9 @@
 package com.aetherteam.treasure_reforging.data;
 
-import com.aetherteam.treasure_reforging.data.generators.*;
+import com.aetherteam.treasure_reforging.data.generators.ReforgingBlockStateData;
+import com.aetherteam.treasure_reforging.data.generators.ReforgingItemModelData;
+import com.aetherteam.treasure_reforging.data.generators.ReforgingLanguageData;
+import com.aetherteam.treasure_reforging.data.generators.ReforgingRecipeData;
 import com.aetherteam.treasure_reforging.data.generators.tags.ReforgingBlockTagData;
 import com.aetherteam.treasure_reforging.data.generators.tags.ReforgingItemTagData;
 import net.minecraft.SharedConstants;

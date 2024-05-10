@@ -2,7 +2,6 @@ package com.aetherteam.treasure_reforging.item;
 
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.item.AetherCreativeTabs;
-import com.aetherteam.aether.item.AetherItems;
 import com.aetherteam.treasure_reforging.TreasureReforging;
 import com.aetherteam.treasure_reforging.block.ReforgingBlocks;
 import net.minecraft.world.item.CreativeModeTab;
