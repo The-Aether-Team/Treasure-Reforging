@@ -7,8 +7,8 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
-import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -20,8 +20,8 @@ import java.util.function.Supplier;
 public class ReforgingBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Aether.MODID);
 
-    public static final RegistryObject<FacingPillarBlock> VALKYRUM_BLOCK = register("valkyrum_block", () -> new FacingPillarBlock(Block.Properties.of().mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.CHIME).strength(50.0F, 1200.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
-    public static final RegistryObject<Block> PYRAL_BLOCK = register("pyral_block", () -> new Block(Block.Properties.of().mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.DIDGERIDOO).strength(50.0F, 1200.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+    public static final RegistryObject<FacingPillarBlock> VALKYRUM_BLOCK = register("valkyrum_block", () -> new FacingPillarBlock(Block.Properties.of(Material.METAL, MaterialColor.QUARTZ).strength(50.0F, 1200.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+    public static final RegistryObject<Block> PYRAL_BLOCK = register("pyral_block", () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).strength(50.0F, 1200.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
 
     private static <T extends Block> RegistryObject<T> baseRegister(String name, Supplier<? extends T> block, Function<RegistryObject<T>, Supplier<? extends Item>> item) {
         RegistryObject<T> register = BLOCKS.register(name, block);

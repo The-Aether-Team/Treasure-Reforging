@@ -1,9 +1,0 @@
-{
-  "asset_name": "valkyrie",
-  "description": {
-    "color": "#D3E2E2",
-    "translate": "trim_material.aether_treasure_reforging.valkyrie"
-  },
-  "ingredient": "aether_treasure_reforging:valkyrum_ingot",
-  "item_model_index": 0.2
-}

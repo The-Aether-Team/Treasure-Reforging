@@ -1,5 +1,0 @@
-// 1.20.1	2024-04-03T15:16:39.6224992	Global Loot Modifiers : aether_treasure_reforging
-b154df5d31e66d0e58f681c10ad50e658d9dd5ef data/aether_treasure_reforging/loot_modifiers/neptune_upgrade_treasure.json
-c3c704f5224f7be8eec80942a82e36f331b3c76d data/aether_treasure_reforging/loot_modifiers/phoenix_upgrade_treasure.json
-d9019f8b2b8cfaf83afcfd1ab9a3984ba4110bb9 data/aether_treasure_reforging/loot_modifiers/valkyrie_upgrade_treasure.json
-4f8c30804d0fa4d7808b25dfefe9340bc4746362 data/forge/loot_modifiers/global_loot_modifiers.json

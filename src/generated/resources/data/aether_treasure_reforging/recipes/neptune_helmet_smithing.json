@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:smithing_transform",
+  "type": "minecraft:smithing",
   "addition": {
     "item": "aether_treasure_reforging:neptune_mesh"
   },
@@ -8,8 +8,5 @@
   },
   "result": {
     "item": "aether:neptune_helmet"
-  },
-  "template": {
-    "item": "aether_treasure_reforging:neptune_upgrade_smithing_template"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:smithing_transform",
+  "type": "minecraft:smithing",
   "addition": {
     "item": "aether_treasure_reforging:valkyrum_ingot"
   },
@@ -8,8 +8,5 @@
   },
   "result": {
     "item": "aether:valkyrie_helmet"
-  },
-  "template": {
-    "item": "aether_treasure_reforging:valkyrie_upgrade_smithing_template"
   }
 }

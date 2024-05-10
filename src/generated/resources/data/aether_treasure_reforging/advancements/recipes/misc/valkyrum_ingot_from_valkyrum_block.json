@@ -30,6 +30,5 @@
     "recipes": [
       "aether_treasure_reforging:valkyrum_ingot_from_valkyrum_block"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

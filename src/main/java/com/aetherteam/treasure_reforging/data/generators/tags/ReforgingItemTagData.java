@@ -25,9 +25,6 @@ public class ReforgingItemTagData extends ItemTagsProvider {
         this.tag(AetherTags.Items.NEPTUNE_REPAIRING).add(ReforgingItems.NEPTUNE_MESH.get());
         this.tag(AetherTags.Items.VALKYRIE_REPAIRING).add(ReforgingItems.VALKYRUM_INGOT.get());
         this.tag(AetherTags.Items.PHOENIX_REPAIRING).add(ReforgingItems.PYRAL_INGOT.get());
-        this.tag(AetherTags.Items.BRONZE_DUNGEON_LOOT).add(ReforgingItems.NEPTUNE_UPGRADE_SMITHING_TEMPLATE.get());
-        this.tag(AetherTags.Items.SILVER_DUNGEON_LOOT).add(ReforgingItems.VALKYRIE_UPGRADE_SMITHING_TEMPLATE.get());
-        this.tag(AetherTags.Items.GOLD_DUNGEON_LOOT).add(ReforgingItems.PHOENIX_UPGRADE_SMITHING_TEMPLATE.get());
 
         this.tag(Tags.Items.STORAGE_BLOCKS).add(
                 ReforgingBlocks.VALKYRUM_BLOCK.get().asItem(),

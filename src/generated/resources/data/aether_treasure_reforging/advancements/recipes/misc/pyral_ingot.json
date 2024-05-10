@@ -30,6 +30,5 @@
     "recipes": [
       "aether_treasure_reforging:pyral_ingot"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

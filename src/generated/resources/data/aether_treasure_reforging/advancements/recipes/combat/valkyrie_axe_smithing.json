@@ -30,6 +30,5 @@
     "recipes": [
       "aether_treasure_reforging:valkyrie_axe_smithing"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

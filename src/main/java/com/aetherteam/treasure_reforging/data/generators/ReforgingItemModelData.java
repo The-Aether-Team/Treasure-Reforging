@@ -18,9 +18,6 @@ public class ReforgingItemModelData extends NitrogenItemModelProvider {
         this.item(ReforgingItems.VALKYRUM_INGOT.get(), "materials/");
         this.item(ReforgingItems.PYRAL_SHARD.get(), "materials/");
         this.item(ReforgingItems.PYRAL_INGOT.get(), "materials/");
-        this.item(ReforgingItems.NEPTUNE_UPGRADE_SMITHING_TEMPLATE.get(), "upgrades/");
-        this.item(ReforgingItems.VALKYRIE_UPGRADE_SMITHING_TEMPLATE.get(), "upgrades/");
-        this.item(ReforgingItems.PHOENIX_UPGRADE_SMITHING_TEMPLATE.get(), "upgrades/");
 
         this.itemBlock(ReforgingBlocks.VALKYRUM_BLOCK.get());
         this.itemBlock(ReforgingBlocks.PYRAL_BLOCK.get());

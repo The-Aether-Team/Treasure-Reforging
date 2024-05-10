@@ -1,9 +1,0 @@
-{
-  "asset_name": "neptune",
-  "description": {
-    "color": "#3E6FD8",
-    "translate": "trim_material.aether_treasure_reforging.neptune"
-  },
-  "ingredient": "aether_treasure_reforging:neptune_mesh",
-  "item_model_index": 0.9
-}

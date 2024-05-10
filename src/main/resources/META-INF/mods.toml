@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[47,)"
+loaderVersion="[45,)"
 license="Assets: All Rights Reserved; Code: LGPL-3.0"
 issueTrackerURL="https://github.com/The-Aether-Team/Treasure-Reforging/issues"
 
@@ -17,18 +17,18 @@ description='''Allows dungeon treasure equipment to be smelted down into raw mat
 [[dependencies.aether_treasure_reforging]]
     modId="forge"
     mandatory=true
-    versionRange="[47.1.0,)"
+    versionRange="[45.1.0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.aether_treasure_reforging]]
     modId = "aether"
     mandatory = true
-    versionRange = "[1.20.1-1.0.0-beta.1-forge,)"
+    versionRange = "[1.19.4-1.0.0-beta.5.1-forge,)"
     ordering = "NONE"
     side = "BOTH"
 [[dependencies.aether_treasure_reforging]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.20.1,)"
+    versionRange="[1.19.4,)"
     ordering="NONE"
     side="BOTH"

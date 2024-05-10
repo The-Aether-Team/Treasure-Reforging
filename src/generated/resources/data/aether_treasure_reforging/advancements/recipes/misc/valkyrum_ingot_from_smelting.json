@@ -147,6 +147,5 @@
     "recipes": [
       "aether_treasure_reforging:valkyrum_ingot_from_smelting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

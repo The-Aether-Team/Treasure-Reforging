@@ -30,6 +30,5 @@
     "recipes": [
       "aether_treasure_reforging:pyral_shard_from_smelting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

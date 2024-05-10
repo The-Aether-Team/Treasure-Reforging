@@ -1,7 +1,7 @@
 plugins {
     id 'eclipse'
     id 'maven-publish'
-    id 'net.neoforged.gradle' version '[6.0.13, 6.2)'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
     id 'org.parchmentmc.librarian.forgegradle' version '[1,2)'
     id 'org.moddingx.modgradle.mapping' version '[4,5)'
     id 'org.moddingx.modgradle.sourcejar' version '[4,5)' apply false
@@ -10,7 +10,7 @@ plugins {
     id 'com.modrinth.minotaur' version '[2,3)'
 }
 
-version = "${mc_version}-${mod_version}-neoforge"
+version = "${mc_version}-${mod_version}-forge"
 group = 'com.aetherteam.treasure_reforging'
 
 base {
@@ -68,11 +68,11 @@ sourceSets.main.resources {
 }
 
 dependencies {
-    minecraft "net.neoforged:forge:${project.mc_version}-${project.neoforge_version}"
+    minecraft "net.minecraftforge:forge:${project.mc_version}-${project.forge_version}"
 
     implementation fg.deobf("com.aetherteam.aether:aether:${project.aether_version}")
     implementation fg.deobf("com.aetherteam.nitrogen:nitrogen_internals:${project.nitrogen_version}")
-    implementation fg.deobf("top.theillusivec4.curios:curios-forge:${project.curios_version}+${project.mc_version}")
+    implementation fg.deobf("top.theillusivec4.curios:curios-forge:${project.curios_version}")
 }
 
 repositories {
@@ -129,7 +129,6 @@ curseforge {
         changelogType = "markdown"
         addGameVersion("${project.mc_version}")
         addGameVersion("Forge")
-        addGameVersion("NeoForge")
         mainArtifact(tasks.jar) {
             displayName = "${project.mod_name} - ${version}"
             relations {
@@ -148,7 +147,7 @@ modrinth {
     changelog = new File("$rootDir/docs/CHANGELOG.md").text
     uploadFile = tasks.jar
     gameVersions = ["${project.mc_version}"]
-    loaders = ["forge", "neoforge"]
+    loaders = ["forge"]
     dependencies {
         required.version "aether", "${project.aether_version}"
     }

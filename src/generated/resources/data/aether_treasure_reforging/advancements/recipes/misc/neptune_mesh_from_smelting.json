@@ -82,6 +82,5 @@
     "recipes": [
       "aether_treasure_reforging:neptune_mesh_from_smelting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }
