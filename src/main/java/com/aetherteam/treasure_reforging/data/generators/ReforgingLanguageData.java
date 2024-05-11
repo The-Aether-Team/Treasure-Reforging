@@ -19,6 +19,9 @@ public class ReforgingLanguageData extends ReforgingLanguageProvider {
         this.addItem(ReforgingItems.VALKYRUM_INGOT, "Valkyrum Ingot");
         this.addItem(ReforgingItems.PYRAL_SHARD, "Pyral Shard");
         this.addItem(ReforgingItems.PYRAL_INGOT, "Pyral Ingot");
+        this.addItem(ReforgingItems.NEPTUNE_UPGRADE_SMITHING_TEMPLATE, "Smithing Template");
+        this.addItem(ReforgingItems.VALKYRIE_UPGRADE_SMITHING_TEMPLATE, "Smithing Template");
+        this.addItem(ReforgingItems.PHOENIX_UPGRADE_SMITHING_TEMPLATE, "Smithing Template");
 
         this.addTrim("neptune", "Neptune");
         this.addTrim("valkyrie", "Valkyrie");

@@ -8,14 +8,13 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SmithingTemplateItem;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredItem;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.List;
 
 public class ReforgingItems {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TreasureReforging.MODID);
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(TreasureReforging.MODID);
 
     private static final ChatFormatting TITLE_FORMAT = ChatFormatting.GRAY;
     private static final ChatFormatting DESCRIPTION_FORMAT = ChatFormatting.BLUE;
@@ -62,14 +61,14 @@ public class ReforgingItems {
     private static final ResourceLocation EMPTY_SLOT_MESH = new ResourceLocation(TreasureReforging.MODID, "item/empty_slot_mesh");
     private static final ResourceLocation EMPTY_SLOT_INGOT = new ResourceLocation("item/empty_slot_ingot");
 
-    public static final RegistryObject<Item> NEPTUNE_MESH = ITEMS.register("neptune_mesh", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> VALKYRUM_INGOT = ITEMS.register("valkyrum_ingot", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> PYRAL_SHARD = ITEMS.register("pyral_shard", () -> new PyralShardItem(new Item.Properties().fireResistant()));
-    public static final RegistryObject<Item> PYRAL_INGOT = ITEMS.register("pyral_ingot", () -> new Item(new Item.Properties().fireResistant()));
+    public static final DeferredItem<Item> NEPTUNE_MESH = ITEMS.register("neptune_mesh", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> VALKYRUM_INGOT = ITEMS.register("valkyrum_ingot", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> PYRAL_SHARD = ITEMS.register("pyral_shard", () -> new PyralShardItem(new Item.Properties().fireResistant()));
+    public static final DeferredItem<Item> PYRAL_INGOT = ITEMS.register("pyral_ingot", () -> new Item(new Item.Properties().fireResistant()));
 
-    public static final RegistryObject<Item> NEPTUNE_UPGRADE_SMITHING_TEMPLATE = ITEMS.register("neptune_upgrade_smithing_template", ReforgingItems::createNeptuneUpgradeTemplate);
-    public static final RegistryObject<Item> VALKYRIE_UPGRADE_SMITHING_TEMPLATE = ITEMS.register("valkyrie_upgrade_smithing_template", ReforgingItems::createValkyrieUpgradeTemplate);
-    public static final RegistryObject<Item> PHOENIX_UPGRADE_SMITHING_TEMPLATE = ITEMS.register("phoenix_upgrade_smithing_template", ReforgingItems::createPhoenixUpgradeTemplate);
+    public static final DeferredItem<Item> NEPTUNE_UPGRADE_SMITHING_TEMPLATE = ITEMS.register("neptune_upgrade_smithing_template", ReforgingItems::createNeptuneUpgradeTemplate);
+    public static final DeferredItem<Item> VALKYRIE_UPGRADE_SMITHING_TEMPLATE = ITEMS.register("valkyrie_upgrade_smithing_template", ReforgingItems::createValkyrieUpgradeTemplate);
+    public static final DeferredItem<Item> PHOENIX_UPGRADE_SMITHING_TEMPLATE = ITEMS.register("phoenix_upgrade_smithing_template", ReforgingItems::createPhoenixUpgradeTemplate);
 
     public static SmithingTemplateItem createNeptuneUpgradeTemplate() {
         return new SmithingTemplateItem(NEPTUNE_UPGRADE_APPLIES_TO,

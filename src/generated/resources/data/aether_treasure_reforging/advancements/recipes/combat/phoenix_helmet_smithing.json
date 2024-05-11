@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_pyral_ingot",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_pyral_ingot"
     ]
   ],
   "rewards": {
     "recipes": [
       "aether_treasure_reforging:phoenix_helmet_smithing"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

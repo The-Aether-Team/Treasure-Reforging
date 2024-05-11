@@ -70,18 +70,17 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_boots",
       "has_leggings",
       "has_chestplate",
       "has_helmet",
-      "has_gloves",
-      "has_the_recipe"
+      "has_gloves"
     ]
   ],
   "rewards": {
     "recipes": [
       "aether_treasure_reforging:pyral_ingot_from_smelting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

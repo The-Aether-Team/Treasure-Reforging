@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_pyral_block",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_pyral_block"
     ]
   ],
   "rewards": {
     "recipes": [
       "aether_treasure_reforging:pyral_ingot_from_pyral_block"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

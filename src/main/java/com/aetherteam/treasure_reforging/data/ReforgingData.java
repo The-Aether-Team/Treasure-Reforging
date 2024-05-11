@@ -3,7 +3,7 @@ package com.aetherteam.treasure_reforging.data;
 import com.aetherteam.treasure_reforging.data.generators.*;
 import com.aetherteam.treasure_reforging.data.generators.tags.ReforgingBlockTagData;
 import com.aetherteam.treasure_reforging.data.generators.tags.ReforgingItemTagData;
-import net.minecraft.SharedConstants;
+import net.minecraft.DetectedVersion;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -11,10 +11,11 @@ import net.minecraft.data.metadata.PackMetadataGenerator;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.metadata.pack.PackMetadataSection;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.data.event.GatherDataEvent;
+import net.minecraft.util.InclusiveRange;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 
-import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 public class ReforgingData {
@@ -38,9 +39,9 @@ public class ReforgingData {
         generator.addProvider(event.includeServer(), new ReforgingItemTagData(packOutput, lookupProvider, blockTags.contentsGetter(), fileHelper));
 
         // pack.mcmeta
-        PackMetadataGenerator packMeta = new PackMetadataGenerator(packOutput);
-        Map<PackType, Integer> packTypes = Map.of(PackType.SERVER_DATA, SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA));
-        packMeta.add(PackMetadataSection.TYPE, new PackMetadataSection(Component.translatable("pack.aether_treasure_reforging.mod.description"), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES), packTypes));
-        generator.addProvider(true, packMeta);
+        generator.addProvider(true, new PackMetadataGenerator(packOutput).add(PackMetadataSection.TYPE, new PackMetadataSection(
+                Component.translatable("pack.aether_treasure_reforging.mod.description"),
+                DetectedVersion.BUILT_IN.getPackVersion(PackType.SERVER_DATA),
+                Optional.of(new InclusiveRange<>(0, Integer.MAX_VALUE)))));
     }
 }

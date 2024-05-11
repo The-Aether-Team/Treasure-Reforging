@@ -5,10 +5,10 @@ import com.aetherteam.treasure_reforging.data.ReforgingData;
 import com.aetherteam.treasure_reforging.item.ReforgingItems;
 import com.aetherteam.treasure_reforging.recipe.TreasureReforgingRecipeSerializers;
 import com.mojang.logging.LogUtils;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.DeferredRegister;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
 
 @Mod(TreasureReforging.MODID)

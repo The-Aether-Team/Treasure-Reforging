@@ -5,8 +5,8 @@ import com.aetherteam.nitrogen.data.providers.NitrogenBlockStateProvider;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public abstract class ReforgingBlockStateProvider extends NitrogenBlockStateProvider {
     public ReforgingBlockStateProvider(PackOutput output, String id, ExistingFileHelper helper) {

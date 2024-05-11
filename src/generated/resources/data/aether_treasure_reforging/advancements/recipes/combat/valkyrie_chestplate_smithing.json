@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_valkyrum_ingot",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_valkyrum_ingot"
     ]
   ],
   "rewards": {
     "recipes": [
       "aether_treasure_reforging:valkyrie_chestplate_smithing"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

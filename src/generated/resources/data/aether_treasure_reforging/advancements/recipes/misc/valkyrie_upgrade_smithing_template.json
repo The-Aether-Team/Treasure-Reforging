@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_valkyrie_upgrade_smithing_template",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_valkyrie_upgrade_smithing_template"
     ]
   ],
   "rewards": {
     "recipes": [
       "aether_treasure_reforging:valkyrie_upgrade_smithing_template"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

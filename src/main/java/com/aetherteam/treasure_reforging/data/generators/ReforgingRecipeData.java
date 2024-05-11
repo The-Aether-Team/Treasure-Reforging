@@ -5,13 +5,11 @@ import com.aetherteam.aether.item.AetherItems;
 import com.aetherteam.treasure_reforging.block.ReforgingBlocks;
 import com.aetherteam.treasure_reforging.data.providers.ReforgingRecipeProvider;
 import com.aetherteam.treasure_reforging.item.ReforgingItems;
-import com.aetherteam.treasure_reforging.recipe.TreasureReforgingRecipeSerializers;
+import com.aetherteam.treasure_reforging.recipe.recipes.PhoenixArmorRecipe;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
-
-import java.util.function.Consumer;
 
 public class ReforgingRecipeData extends ReforgingRecipeProvider {
     public ReforgingRecipeData(PackOutput output) {
@@ -19,21 +17,21 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
     }
 
     @Override
-    protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
+    protected void buildRecipes(RecipeOutput recipeOutput) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ReforgingItems.PYRAL_INGOT.get())
                 .requires(ReforgingItems.PYRAL_SHARD.get(), 4)
                 .requires(Blocks.OBSIDIAN, 2)
                 .unlockedBy("has_pyral_shard", has(ReforgingItems.PYRAL_SHARD.get()))
-                .save(consumer);
+                .save(recipeOutput);
 
-        SpecialRecipeBuilder.special(TreasureReforgingRecipeSerializers.PHOENIX_ARMOR.get()).save(consumer, "phoenix_armor_reigniting");
+        SpecialRecipeBuilder.special(PhoenixArmorRecipe::new).save(recipeOutput, "phoenix_armor_reigniting");
 
-        this.oreBlockStorageRecipesRecipesWithCustomUnpacking(consumer, RecipeCategory.MISC, ReforgingItems.VALKYRUM_INGOT.get(), RecipeCategory.BUILDING_BLOCKS, ReforgingBlocks.VALKYRUM_BLOCK.get(), "valkyrum_ingot_from_valkyrum_block", "valkyrum_ingot");
-        this.oreBlockStorageRecipesRecipesWithCustomUnpacking(consumer, RecipeCategory.MISC, ReforgingItems.PYRAL_INGOT.get(), RecipeCategory.BUILDING_BLOCKS, ReforgingBlocks.PYRAL_BLOCK.get(), "pyral_ingot_from_pyral_block", "pyral_ingot");
+        this.oreBlockStorageRecipesRecipesWithCustomUnpacking(recipeOutput, RecipeCategory.MISC, ReforgingItems.VALKYRUM_INGOT.get(), RecipeCategory.BUILDING_BLOCKS, ReforgingBlocks.VALKYRUM_BLOCK.get(), "valkyrum_ingot_from_valkyrum_block", "valkyrum_ingot");
+        this.oreBlockStorageRecipesRecipesWithCustomUnpacking(recipeOutput, RecipeCategory.MISC, ReforgingItems.PYRAL_INGOT.get(), RecipeCategory.BUILDING_BLOCKS, ReforgingBlocks.PYRAL_BLOCK.get(), "pyral_ingot_from_pyral_block", "pyral_ingot");
 
-        this.copyDungeonSmithingTemplate(consumer, ReforgingItems.NEPTUNE_UPGRADE_SMITHING_TEMPLATE.get(), AetherBlocks.CARVED_STONE.get());
-        this.copyDungeonSmithingTemplate(consumer, ReforgingItems.VALKYRIE_UPGRADE_SMITHING_TEMPLATE.get(), AetherBlocks.ANGELIC_STONE.get());
-        this.copyDungeonSmithingTemplate(consumer, ReforgingItems.PHOENIX_UPGRADE_SMITHING_TEMPLATE.get(), AetherBlocks.HELLFIRE_STONE.get());
+        this.copyDungeonSmithingTemplate(recipeOutput, ReforgingItems.NEPTUNE_UPGRADE_SMITHING_TEMPLATE.get(), AetherBlocks.CARVED_STONE.get());
+        this.copyDungeonSmithingTemplate(recipeOutput, ReforgingItems.VALKYRIE_UPGRADE_SMITHING_TEMPLATE.get(), AetherBlocks.ANGELIC_STONE.get());
+        this.copyDungeonSmithingTemplate(recipeOutput, ReforgingItems.PHOENIX_UPGRADE_SMITHING_TEMPLATE.get(), AetherBlocks.HELLFIRE_STONE.get());
 
         SimpleCookingRecipeBuilder.smelting(
                         Ingredient.of(AetherItems.NEPTUNE_BOOTS.get(), AetherItems.NEPTUNE_LEGGINGS.get(), AetherItems.NEPTUNE_CHESTPLATE.get(), AetherItems.NEPTUNE_HELMET.get(), AetherItems.NEPTUNE_GLOVES.get()),
@@ -47,7 +45,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                 .unlockedBy("has_helmet", has(AetherItems.NEPTUNE_HELMET.get()))
                 .unlockedBy("has_gloves", has(AetherItems.NEPTUNE_GLOVES.get()))
                 .group(getSmeltingRecipeName(ReforgingItems.NEPTUNE_MESH.get()))
-                .save(consumer, this.name(getSmeltingRecipeName(ReforgingItems.NEPTUNE_MESH.get())));
+                .save(recipeOutput, this.name(getSmeltingRecipeName(ReforgingItems.NEPTUNE_MESH.get())));
         SimpleCookingRecipeBuilder.smelting(
                         Ingredient.of(AetherItems.VALKYRIE_BOOTS.get(), AetherItems.VALKYRIE_LEGGINGS.get(), AetherItems.VALKYRIE_CHESTPLATE.get(), AetherItems.VALKYRIE_HELMET.get(), AetherItems.VALKYRIE_GLOVES.get(),
                                 AetherItems.VALKYRIE_LANCE.get(), AetherItems.VALKYRIE_PICKAXE.get(), AetherItems.VALKYRIE_AXE.get(), AetherItems.VALKYRIE_SHOVEL.get(), AetherItems.VALKYRIE_HOE.get()),
@@ -66,7 +64,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                 .unlockedBy("has_shovel", has(AetherItems.VALKYRIE_SHOVEL.get()))
                 .unlockedBy("has_hoe", has(AetherItems.VALKYRIE_HOE.get()))
                 .group(getSmeltingRecipeName(ReforgingItems.VALKYRUM_INGOT.get()))
-                .save(consumer, this.name(getSmeltingRecipeName(ReforgingItems.VALKYRUM_INGOT.get())));
+                .save(recipeOutput, this.name(getSmeltingRecipeName(ReforgingItems.VALKYRUM_INGOT.get())));
         SimpleCookingRecipeBuilder.smelting(
                         Ingredient.of(AetherItems.PHOENIX_BOOTS.get(), AetherItems.PHOENIX_LEGGINGS.get(), AetherItems.PHOENIX_CHESTPLATE.get(), AetherItems.PHOENIX_HELMET.get(), AetherItems.PHOENIX_GLOVES.get()),
                         RecipeCategory.MISC,
@@ -79,7 +77,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                 .unlockedBy("has_helmet", has(AetherItems.PHOENIX_HELMET.get()))
                 .unlockedBy("has_gloves", has(AetherItems.PHOENIX_GLOVES.get()))
                 .group(getSmeltingRecipeName(ReforgingItems.PYRAL_INGOT.get()))
-                .save(consumer, this.name(getSmeltingRecipeName(ReforgingItems.PYRAL_INGOT.get())));
+                .save(recipeOutput, this.name(getSmeltingRecipeName(ReforgingItems.PYRAL_INGOT.get())));
         SimpleCookingRecipeBuilder.smelting(
                         Ingredient.of(AetherBlocks.SUN_ALTAR.get()),
                         RecipeCategory.MISC,
@@ -88,7 +86,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                         200)
                 .unlockedBy("has_sun_altar", has(AetherBlocks.SUN_ALTAR.get()))
                 .group(getSmeltingRecipeName(ReforgingItems.PYRAL_SHARD.get()))
-                .save(consumer, this.name(getSmeltingRecipeName(ReforgingItems.PYRAL_SHARD.get())));
+                .save(recipeOutput, this.name(getSmeltingRecipeName(ReforgingItems.PYRAL_SHARD.get())));
 
         SmithingTransformRecipeBuilder.smithing(
                     Ingredient.of(ReforgingItems.NEPTUNE_UPGRADE_SMITHING_TEMPLATE.get()),
@@ -97,7 +95,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                     RecipeCategory.COMBAT,
                     AetherItems.NEPTUNE_BOOTS.get())
                 .unlocks("has_neptune_mesh", has(ReforgingItems.NEPTUNE_MESH.get()))
-                .save(consumer, this.name(getItemName(AetherItems.NEPTUNE_BOOTS.get()) + "_smithing"));
+                .save(recipeOutput, this.name(getItemName(AetherItems.NEPTUNE_BOOTS.get()) + "_smithing"));
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(ReforgingItems.NEPTUNE_UPGRADE_SMITHING_TEMPLATE.get()),
                         Ingredient.of(AetherItems.ZANITE_LEGGINGS.get()),
@@ -105,7 +103,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                         RecipeCategory.COMBAT,
                         AetherItems.NEPTUNE_LEGGINGS.get())
                 .unlocks("has_neptune_mesh", has(ReforgingItems.NEPTUNE_MESH.get()))
-                .save(consumer, this.name(getItemName(AetherItems.NEPTUNE_LEGGINGS.get()) + "_smithing"));
+                .save(recipeOutput, this.name(getItemName(AetherItems.NEPTUNE_LEGGINGS.get()) + "_smithing"));
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(ReforgingItems.NEPTUNE_UPGRADE_SMITHING_TEMPLATE.get()),
                         Ingredient.of(AetherItems.ZANITE_CHESTPLATE.get()),
@@ -113,7 +111,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                         RecipeCategory.COMBAT,
                         AetherItems.NEPTUNE_CHESTPLATE.get())
                 .unlocks("has_neptune_mesh", has(ReforgingItems.NEPTUNE_MESH.get()))
-                .save(consumer, this.name(getItemName(AetherItems.NEPTUNE_CHESTPLATE.get()) + "_smithing"));
+                .save(recipeOutput, this.name(getItemName(AetherItems.NEPTUNE_CHESTPLATE.get()) + "_smithing"));
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(ReforgingItems.NEPTUNE_UPGRADE_SMITHING_TEMPLATE.get()),
                         Ingredient.of(AetherItems.ZANITE_HELMET.get()),
@@ -121,7 +119,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                         RecipeCategory.COMBAT,
                         AetherItems.NEPTUNE_HELMET.get())
                 .unlocks("has_neptune_mesh", has(ReforgingItems.NEPTUNE_MESH.get()))
-                .save(consumer, this.name(getItemName(AetherItems.NEPTUNE_HELMET.get()) + "_smithing"));
+                .save(recipeOutput, this.name(getItemName(AetherItems.NEPTUNE_HELMET.get()) + "_smithing"));
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(ReforgingItems.NEPTUNE_UPGRADE_SMITHING_TEMPLATE.get()),
                         Ingredient.of(AetherItems.ZANITE_GLOVES.get()),
@@ -129,7 +127,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                         RecipeCategory.COMBAT,
                         AetherItems. NEPTUNE_GLOVES.get())
                 .unlocks("has_neptune_mesh", has(ReforgingItems.NEPTUNE_MESH.get()))
-                .save(consumer, this.name(getItemName(AetherItems.NEPTUNE_GLOVES.get()) + "_smithing"));
+                .save(recipeOutput, this.name(getItemName(AetherItems.NEPTUNE_GLOVES.get()) + "_smithing"));
 
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(ReforgingItems.VALKYRIE_UPGRADE_SMITHING_TEMPLATE.get()),
@@ -138,7 +136,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                         RecipeCategory.COMBAT,
                         AetherItems.VALKYRIE_BOOTS.get())
                 .unlocks("has_valkyrum_ingot", has(ReforgingItems.VALKYRUM_INGOT.get()))
-                .save(consumer, this.name(getItemName(AetherItems.VALKYRIE_BOOTS.get()) + "_smithing"));
+                .save(recipeOutput, this.name(getItemName(AetherItems.VALKYRIE_BOOTS.get()) + "_smithing"));
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(ReforgingItems.VALKYRIE_UPGRADE_SMITHING_TEMPLATE.get()),
                         Ingredient.of(AetherItems.GRAVITITE_LEGGINGS.get()),
@@ -146,7 +144,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                         RecipeCategory.COMBAT,
                         AetherItems.VALKYRIE_LEGGINGS.get())
                 .unlocks("has_valkyrum_ingot", has(ReforgingItems.VALKYRUM_INGOT.get()))
-                .save(consumer, this.name(getItemName(AetherItems.VALKYRIE_LEGGINGS.get()) + "_smithing"));
+                .save(recipeOutput, this.name(getItemName(AetherItems.VALKYRIE_LEGGINGS.get()) + "_smithing"));
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(ReforgingItems.VALKYRIE_UPGRADE_SMITHING_TEMPLATE.get()),
                         Ingredient.of(AetherItems.GRAVITITE_CHESTPLATE.get()),
@@ -154,7 +152,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                         RecipeCategory.COMBAT,
                         AetherItems.VALKYRIE_CHESTPLATE.get())
                 .unlocks("has_valkyrum_ingot", has(ReforgingItems.VALKYRUM_INGOT.get()))
-                .save(consumer, this.name(getItemName(AetherItems.VALKYRIE_CHESTPLATE.get()) + "_smithing"));
+                .save(recipeOutput, this.name(getItemName(AetherItems.VALKYRIE_CHESTPLATE.get()) + "_smithing"));
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(ReforgingItems.VALKYRIE_UPGRADE_SMITHING_TEMPLATE.get()),
                         Ingredient.of(AetherItems.GRAVITITE_HELMET.get()),
@@ -162,7 +160,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                         RecipeCategory.COMBAT,
                         AetherItems.VALKYRIE_HELMET.get())
                 .unlocks("has_valkyrum_ingot", has(ReforgingItems.VALKYRUM_INGOT.get()))
-                .save(consumer, this.name(getItemName(AetherItems.VALKYRIE_HELMET.get()) + "_smithing"));
+                .save(recipeOutput, this.name(getItemName(AetherItems.VALKYRIE_HELMET.get()) + "_smithing"));
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(ReforgingItems.VALKYRIE_UPGRADE_SMITHING_TEMPLATE.get()),
                         Ingredient.of(AetherItems.GRAVITITE_GLOVES.get()),
@@ -170,7 +168,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                         RecipeCategory.COMBAT,
                         AetherItems. VALKYRIE_GLOVES.get())
                 .unlocks("has_valkyrum_ingot", has(ReforgingItems.VALKYRUM_INGOT.get()))
-                .save(consumer, this.name(getItemName(AetherItems.VALKYRIE_GLOVES.get()) + "_smithing"));
+                .save(recipeOutput, this.name(getItemName(AetherItems.VALKYRIE_GLOVES.get()) + "_smithing"));
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(ReforgingItems.VALKYRIE_UPGRADE_SMITHING_TEMPLATE.get()),
                         Ingredient.of(AetherItems.GRAVITITE_SWORD.get()),
@@ -178,7 +176,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                         RecipeCategory.COMBAT,
                         AetherItems. VALKYRIE_LANCE.get())
                 .unlocks("has_valkyrum_ingot", has(ReforgingItems.VALKYRUM_INGOT.get()))
-                .save(consumer, this.name(getItemName(AetherItems.VALKYRIE_LANCE.get()) + "_smithing"));
+                .save(recipeOutput, this.name(getItemName(AetherItems.VALKYRIE_LANCE.get()) + "_smithing"));
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(ReforgingItems.VALKYRIE_UPGRADE_SMITHING_TEMPLATE.get()),
                         Ingredient.of(AetherItems.GRAVITITE_PICKAXE.get()),
@@ -186,7 +184,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                         RecipeCategory.COMBAT,
                         AetherItems. VALKYRIE_PICKAXE.get())
                 .unlocks("has_valkyrum_ingot", has(ReforgingItems.VALKYRUM_INGOT.get()))
-                .save(consumer, this.name(getItemName(AetherItems.VALKYRIE_PICKAXE.get()) + "_smithing"));
+                .save(recipeOutput, this.name(getItemName(AetherItems.VALKYRIE_PICKAXE.get()) + "_smithing"));
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(ReforgingItems.VALKYRIE_UPGRADE_SMITHING_TEMPLATE.get()),
                         Ingredient.of(AetherItems.GRAVITITE_AXE.get()),
@@ -194,7 +192,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                         RecipeCategory.COMBAT,
                         AetherItems. VALKYRIE_AXE.get())
                 .unlocks("has_valkyrum_ingot", has(ReforgingItems.VALKYRUM_INGOT.get()))
-                .save(consumer, this.name(getItemName(AetherItems.VALKYRIE_AXE.get()) + "_smithing"));
+                .save(recipeOutput, this.name(getItemName(AetherItems.VALKYRIE_AXE.get()) + "_smithing"));
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(ReforgingItems.VALKYRIE_UPGRADE_SMITHING_TEMPLATE.get()),
                         Ingredient.of(AetherItems.GRAVITITE_SHOVEL.get()),
@@ -202,7 +200,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                         RecipeCategory.COMBAT,
                         AetherItems. VALKYRIE_SHOVEL.get())
                 .unlocks("has_valkyrum_ingot", has(ReforgingItems.VALKYRUM_INGOT.get()))
-                .save(consumer, this.name(getItemName(AetherItems.VALKYRIE_SHOVEL.get()) + "_smithing"));
+                .save(recipeOutput, this.name(getItemName(AetherItems.VALKYRIE_SHOVEL.get()) + "_smithing"));
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(ReforgingItems.VALKYRIE_UPGRADE_SMITHING_TEMPLATE.get()),
                         Ingredient.of(AetherItems.GRAVITITE_HOE.get()),
@@ -210,7 +208,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                         RecipeCategory.COMBAT,
                         AetherItems. VALKYRIE_HOE.get())
                 .unlocks("has_valkyrum_ingot", has(ReforgingItems.VALKYRUM_INGOT.get()))
-                .save(consumer, this.name(getItemName(AetherItems.VALKYRIE_HOE.get()) + "_smithing"));
+                .save(recipeOutput, this.name(getItemName(AetherItems.VALKYRIE_HOE.get()) + "_smithing"));
 
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(ReforgingItems.PHOENIX_UPGRADE_SMITHING_TEMPLATE.get()),
@@ -219,7 +217,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                         RecipeCategory.COMBAT,
                         AetherItems.PHOENIX_BOOTS.get())
                 .unlocks("has_pyral_ingot", has(ReforgingItems.PYRAL_INGOT.get()))
-                .save(consumer, this.name(getItemName(AetherItems.PHOENIX_BOOTS.get()) + "_smithing"));
+                .save(recipeOutput, this.name(getItemName(AetherItems.PHOENIX_BOOTS.get()) + "_smithing"));
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(ReforgingItems.PHOENIX_UPGRADE_SMITHING_TEMPLATE.get()),
                         Ingredient.of(AetherItems.GRAVITITE_LEGGINGS.get()),
@@ -227,7 +225,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                         RecipeCategory.COMBAT,
                         AetherItems.PHOENIX_LEGGINGS.get())
                 .unlocks("has_pyral_ingot", has(ReforgingItems.PYRAL_INGOT.get()))
-                .save(consumer, this.name(getItemName(AetherItems.PHOENIX_LEGGINGS.get()) + "_smithing"));
+                .save(recipeOutput, this.name(getItemName(AetherItems.PHOENIX_LEGGINGS.get()) + "_smithing"));
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(ReforgingItems.PHOENIX_UPGRADE_SMITHING_TEMPLATE.get()),
                         Ingredient.of(AetherItems.GRAVITITE_CHESTPLATE.get()),
@@ -235,7 +233,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                         RecipeCategory.COMBAT,
                         AetherItems.PHOENIX_CHESTPLATE.get())
                 .unlocks("has_pyral_ingot", has(ReforgingItems.PYRAL_INGOT.get()))
-                .save(consumer, this.name(getItemName(AetherItems.PHOENIX_CHESTPLATE.get()) + "_smithing"));
+                .save(recipeOutput, this.name(getItemName(AetherItems.PHOENIX_CHESTPLATE.get()) + "_smithing"));
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(ReforgingItems.PHOENIX_UPGRADE_SMITHING_TEMPLATE.get()),
                         Ingredient.of(AetherItems.GRAVITITE_HELMET.get()),
@@ -243,7 +241,7 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                         RecipeCategory.COMBAT,
                         AetherItems.PHOENIX_HELMET.get())
                 .unlocks("has_pyral_ingot", has(ReforgingItems.PYRAL_INGOT.get()))
-                .save(consumer, this.name(getItemName(AetherItems.PHOENIX_HELMET.get()) + "_smithing"));
+                .save(recipeOutput, this.name(getItemName(AetherItems.PHOENIX_HELMET.get()) + "_smithing"));
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(ReforgingItems.PHOENIX_UPGRADE_SMITHING_TEMPLATE.get()),
                         Ingredient.of(AetherItems.GRAVITITE_GLOVES.get()),
@@ -251,6 +249,6 @@ public class ReforgingRecipeData extends ReforgingRecipeProvider {
                         RecipeCategory.COMBAT,
                         AetherItems. PHOENIX_GLOVES.get())
                 .unlocks("has_pyral_ingot", has(ReforgingItems.PYRAL_INGOT.get()))
-                .save(consumer, this.name(getItemName(AetherItems.PHOENIX_GLOVES.get()) + "_smithing"));
+                .save(recipeOutput, this.name(getItemName(AetherItems.PHOENIX_GLOVES.get()) + "_smithing"));
     }
 }

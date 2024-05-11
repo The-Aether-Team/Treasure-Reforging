@@ -1,7 +1,7 @@
 package com.aetherteam.treasure_reforging.data.generators;
 
 import com.aetherteam.aether.loot.AetherLoot;
-import com.aetherteam.nitrogen.loot.AddDungeonLootModifier;
+import com.aetherteam.nitrogen.loot.modifiers.AddDungeonLootModifier;
 import com.aetherteam.treasure_reforging.TreasureReforging;
 import com.aetherteam.treasure_reforging.item.ReforgingItems;
 import net.minecraft.data.PackOutput;
@@ -9,8 +9,8 @@ import net.minecraft.util.random.WeightedEntry;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.minecraftforge.common.data.GlobalLootModifierProvider;
-import net.minecraftforge.common.loot.LootTableIdCondition;
+import net.neoforged.neoforge.common.data.GlobalLootModifierProvider;
+import net.neoforged.neoforge.common.loot.LootTableIdCondition;
 
 import java.util.List;
 
