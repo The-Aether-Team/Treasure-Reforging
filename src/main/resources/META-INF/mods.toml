@@ -7,12 +7,14 @@ issueTrackerURL="https://github.com/The-Aether-Team/Treasure-Reforging/issues"
 modId="aether_treasure_reforging"
 version="${file.jarVersion}"
 displayName="Treasure Reforging"
-updateJSONURL="https://github.com/The-Aether-Team/Treasure-Reforging/raw/1.20.1-develop/update.json"
+updateJSONURL="https://github.com/The-Aether-Team/Treasure-Reforging/raw/1.19.2-develop/update.json"
 displayURL="https://modrinth.com/mod/aether-treasure-reforging"
 logoFile="treasure_reforging_icon.png"
 credits="The Aether Team"
 authors="bconlon, Oz Payn"
-description='''Allows dungeon treasure equipment to be smelted down into raw materials, which can be smithed back into other treasure equipment using new templates.'''
+description='''
+    Allows dungeon treasure equipment to be smelted down into raw materials, which can be smithed back into other treasure equipment using new templates.
+'''
 
 [[dependencies.aether_treasure_reforging]]
     modId="forge"
