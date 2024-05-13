@@ -12,7 +12,9 @@ displayURL="https://modrinth.com/mod/aether-treasure-reforging"
 logoFile="treasure_reforging_icon.png"
 credits="The Aether Team"
 authors="bconlon, Oz Payn"
-description='''Allows dungeon treasure equipment to be smelted down into raw materials, which can be smithed back into other treasure equipment using new templates.'''
+description='''
+    Allows dungeon treasure equipment to be smelted down into raw materials, which can be smithed back into other treasure equipment using new templates.
+'''
 
 [[dependencies.aether_treasure_reforging]]
     modId="forge"
