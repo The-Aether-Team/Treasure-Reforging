@@ -1,4 +1,4 @@
-# Treasure Reforging - Forge - 1.20.1-1.0.0
+# Treasure Reforging - Forge - 1.19.4-1.0.0
 
 - Add three new smithing materials: Neptune Mesh, Valkyrum Ingot, and Pyral Ingot. These can be obtained by smelting their respective equipment sets in a furnace.
 - Add smithing recipes for Neptune, Valkyrie, and Phoenix equipment, using the respective material. Neptune equipment can be smithed from Zanite equipment, while Valkyrie and Phoenix equipment can be smithed from Gravitite equipment.
