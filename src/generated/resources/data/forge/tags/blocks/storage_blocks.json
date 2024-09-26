@@ -1,6 +1,6 @@
 {
   "values": [
-    "aether:valkyrum_block",
-    "aether:pyral_block"
+    "aether_treasure_reforging:valkyrum_block",
+    "aether_treasure_reforging:pyral_block"
   ]
 }
