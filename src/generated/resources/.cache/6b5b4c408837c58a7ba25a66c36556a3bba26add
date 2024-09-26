@@ -1,6 +1,6 @@
-// 1.19.4	2024-05-09T14:08:13.1915914	Block States: aether_treasure_reforging
-f00bcb829a6af337a592d0442d02ca35be1c4830 assets/aether/blockstates/pyral_block.json
-9b1438950be937e5c5aba53513dd71e1127b864b assets/aether/blockstates/valkyrum_block.json
+// 1.19.4	2024-09-26T12:28:43.8514886	Block States: aether_treasure_reforging
+f00bcb829a6af337a592d0442d02ca35be1c4830 assets/aether_treasure_reforging/blockstates/pyral_block.json
+9b1438950be937e5c5aba53513dd71e1127b864b assets/aether_treasure_reforging/blockstates/valkyrum_block.json
 ea3b7ce93bad864feb437c32f80addb4122b4b84 assets/aether_treasure_reforging/models/block/pyral_block.json
 b126328ad7263cdc93459ae3e151b5426bb65159 assets/aether_treasure_reforging/models/block/valkyrum_block.json
 01ccafc7c2658228a3325c21e068c151c6833a01 assets/aether_treasure_reforging/models/block/valkyrum_block_horizontal.json
