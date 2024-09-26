@@ -1,7 +1,7 @@
 package com.aetherteam.treasure_reforging.block;
 
-import com.aetherteam.aether.Aether;
 import com.aetherteam.aether.block.miscellaneous.FacingPillarBlock;
+import com.aetherteam.treasure_reforging.TreasureReforging;
 import com.aetherteam.treasure_reforging.item.ReforgingItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -17,7 +17,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class ReforgingBlocks {
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Aether.MODID);
+    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(TreasureReforging.MODID);
 
     public static final DeferredBlock<FacingPillarBlock> VALKYRUM_BLOCK = register("valkyrum_block", () -> new FacingPillarBlock(Block.Properties.of().mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.CHIME).strength(5.0F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
     public static final DeferredBlock<Block> PYRAL_BLOCK = register("pyral_block", () -> new Block(Block.Properties.of().mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.DIDGERIDOO).strength(5.0F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)));

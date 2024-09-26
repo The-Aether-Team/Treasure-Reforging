@@ -1,3 +1,3 @@
-// 1.20.4	2024-09-26T11:12:33.5755532	Loot Tables
-dbf3240a71731dbbf8e009549358fe06b1606d8f data/aether/loot_tables/blocks/pyral_block.json
-d324f3492facdf203fc3d8b1d86c5d86f01b5453 data/aether/loot_tables/blocks/valkyrum_block.json
+// 1.20.4	2024-09-26T12:45:36.2405376	Loot Tables
+e125b9ac88e9b5288c731d1d17d73d1f930eb359 data/aether_treasure_reforging/loot_tables/blocks/pyral_block.json
+71569d5553777bab28f87b989e3de01b8491e116 data/aether_treasure_reforging/loot_tables/blocks/valkyrum_block.json
