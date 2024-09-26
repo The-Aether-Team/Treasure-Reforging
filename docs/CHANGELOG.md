@@ -1,3 +1,7 @@
+# Treasure Reforging - NeoForge - 1.20.4-1.0.1
+
+- Fix Block of Valkyrum and Block of Pyral not being mineable.
+
 # Treasure Reforging - NeoForge - 1.20.4-1.0.0
 
 - Add three new Smithing Templates: Neptune Upgrade, Valkyrie Upgrade, and Phoenix Upgrade. These can be found as loot in their respective dungeons.
