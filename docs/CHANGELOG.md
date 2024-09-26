@@ -1,5 +1,9 @@
 # Treasure Reforging - Forge - 1.19.2-1.0.0
 
+- Fix Block of Valkyrum and Block of Pyral not being mineable.
+
+# Treasure Reforging - Forge - 1.19.2-1.0.0
+
 - Add three new smithing materials: Neptune Mesh, Valkyrum Ingot, and Pyral Ingot. These can be obtained by smelting their respective equipment sets in a furnace.
 - Add smithing recipes for Neptune, Valkyrie, and Phoenix equipment, using the respective material. Neptune equipment can be smithed from Zanite equipment, while Valkyrie and Phoenix equipment can be smithed from Gravitite equipment.
 - Add Block of Valkyrum and Block of Pyral. The former is a directional block while the latter is a regular block.
