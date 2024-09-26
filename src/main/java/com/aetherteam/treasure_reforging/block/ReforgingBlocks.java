@@ -20,8 +20,8 @@ import java.util.function.Supplier;
 public class ReforgingBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Aether.MODID);
 
-    public static final RegistryObject<FacingPillarBlock> VALKYRUM_BLOCK = register("valkyrum_block", () -> new FacingPillarBlock(Block.Properties.of(Material.METAL, MaterialColor.QUARTZ).strength(50.0F, 1200.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
-    public static final RegistryObject<Block> PYRAL_BLOCK = register("pyral_block", () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).strength(50.0F, 1200.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+    public static final RegistryObject<FacingPillarBlock> VALKYRUM_BLOCK = register("valkyrum_block", () -> new FacingPillarBlock(Block.Properties.of(Material.METAL, MaterialColor.QUARTZ).strength(5.0F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+    public static final RegistryObject<Block> PYRAL_BLOCK = register("pyral_block", () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).strength(5.0F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
 
     private static <T extends Block> RegistryObject<T> baseRegister(String name, Supplier<? extends T> block, Function<RegistryObject<T>, Supplier<? extends Item>> item) {
         RegistryObject<T> register = BLOCKS.register(name, block);
