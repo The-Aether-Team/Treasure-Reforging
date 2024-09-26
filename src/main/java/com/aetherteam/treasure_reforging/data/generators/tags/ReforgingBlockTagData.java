@@ -22,6 +22,9 @@ public class ReforgingBlockTagData extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
                 ReforgingBlocks.VALKYRUM_BLOCK.get(),
                 ReforgingBlocks.PYRAL_BLOCK.get());
+        this.tag(BlockTags.NEEDS_IRON_TOOL).add(
+                ReforgingBlocks.VALKYRUM_BLOCK.get(),
+                ReforgingBlocks.PYRAL_BLOCK.get());
 
         this.tag(Tags.Blocks.STORAGE_BLOCKS).add(
                 ReforgingBlocks.VALKYRUM_BLOCK.get(),
