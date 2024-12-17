@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "neptune_mesh_from_smelting",
+  "ingredient": [
+    {
+      "item": "aether:neptune_boots"
+    },
+    {
+      "item": "aether:neptune_leggings"
+    },
+    {
+      "item": "aether:neptune_chestplate"
+    },
+    {
+      "item": "aether:neptune_helmet"
+    },
+    {
+      "item": "aether:neptune_gloves"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "aether_treasure_reforging:neptune_mesh"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "aether_treasure_reforging:neptune_mesh"
+  },
+  "base": {
+    "item": "aether:zanite_chestplate"
+  },
+  "result": {
+    "count": 1,
+    "id": "aether:neptune_chestplate"
+  },
+  "template": {
+    "item": "aether_treasure_reforging:neptune_upgrade_smithing_template"
+  }
+}

@@ -3,15 +3,10 @@ package com.aetherteam.treasure_reforging.recipe.recipes;
 import com.aetherteam.aether.item.AetherItems;
 import com.aetherteam.treasure_reforging.item.ReforgingItems;
 import com.aetherteam.treasure_reforging.recipe.TreasureReforgingRecipeSerializers;
-import net.minecraft.core.RegistryAccess;
-import net.minecraft.world.inventory.CraftingContainer;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.CraftingBookCategory;
-import net.minecraft.world.item.crafting.CustomRecipe;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 
 import java.util.HashMap;
@@ -32,11 +27,11 @@ public class PhoenixArmorRecipe extends CustomRecipe {
     }
 
     @Override
-    public boolean matches(CraftingContainer container, Level level) {
+    public boolean matches(CraftingInput craftingInput, Level level) {
         int shardCount = 0;
         int equipmentCount = 0;
-        for (int i = 0; i < container.getContainerSize(); ++i) {
-            ItemStack item = container.getItem(i);
+        for (int i = 0; i < craftingInput.size(); ++i) {
+            ItemStack item = craftingInput.getItem(i);
             if (!item.isEmpty()) {
                 if (this.conversions.containsKey(item.getItem())) {
                     equipmentCount++;
@@ -49,17 +44,13 @@ public class PhoenixArmorRecipe extends CustomRecipe {
     }
 
     @Override
-    public ItemStack assemble(CraftingContainer container, RegistryAccess registryAccess) {
+    public ItemStack assemble(CraftingInput craftingInput, HolderLookup.Provider provider) {
         ItemStack result = ItemStack.EMPTY;
-        for (int i = 0; i < container.getContainerSize(); ++i) {
-            ItemStack item = container.getItem(i);
+        for (int i = 0; i < craftingInput.size(); ++i) {
+            ItemStack item = craftingInput.getItem(i);
             if (!item.isEmpty()) {
                 if (this.conversions.containsKey(item.getItem())) {
-                    result = new ItemStack(this.conversions.get(item.getItem()));
-                    EnchantmentHelper.setEnchantments(EnchantmentHelper.getEnchantments(item), result);
-                    if (item.hasTag()) {
-                        result.setTag(item.getTag());
-                    }
+                    result = new ItemStack(this.conversions.get(item.getItem()).builtInRegistryHolder(), 1, item.getComponentsPatch());
                 }
             }
         }

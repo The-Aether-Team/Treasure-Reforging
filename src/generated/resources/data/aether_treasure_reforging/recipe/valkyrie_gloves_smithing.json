@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "aether_treasure_reforging:valkyrum_ingot"
+  },
+  "base": {
+    "item": "aether:gravitite_gloves"
+  },
+  "result": {
+    "count": 1,
+    "id": "aether:valkyrie_gloves"
+  },
+  "template": {
+    "item": "aether_treasure_reforging:valkyrie_upgrade_smithing_template"
+  }
+}

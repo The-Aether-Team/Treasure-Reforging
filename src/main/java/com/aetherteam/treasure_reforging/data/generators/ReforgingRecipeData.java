@@ -6,14 +6,17 @@ import com.aetherteam.treasure_reforging.block.ReforgingBlocks;
 import com.aetherteam.treasure_reforging.data.providers.ReforgingRecipeProvider;
 import com.aetherteam.treasure_reforging.item.ReforgingItems;
 import com.aetherteam.treasure_reforging.recipe.recipes.PhoenixArmorRecipe;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 
+import java.util.concurrent.CompletableFuture;
+
 public class ReforgingRecipeData extends ReforgingRecipeProvider {
-    public ReforgingRecipeData(PackOutput output) {
-        super(output);
+    public ReforgingRecipeData(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+        super(output, registries);
     }
 
     @Override

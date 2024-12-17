@@ -1,0 +1,43 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "valkyrum_ingot_from_smelting",
+  "ingredient": [
+    {
+      "item": "aether:valkyrie_boots"
+    },
+    {
+      "item": "aether:valkyrie_leggings"
+    },
+    {
+      "item": "aether:valkyrie_chestplate"
+    },
+    {
+      "item": "aether:valkyrie_helmet"
+    },
+    {
+      "item": "aether:valkyrie_gloves"
+    },
+    {
+      "item": "aether:valkyrie_lance"
+    },
+    {
+      "item": "aether:valkyrie_pickaxe"
+    },
+    {
+      "item": "aether:valkyrie_axe"
+    },
+    {
+      "item": "aether:valkyrie_shovel"
+    },
+    {
+      "item": "aether:valkyrie_hoe"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "aether_treasure_reforging:valkyrum_ingot"
+  }
+}

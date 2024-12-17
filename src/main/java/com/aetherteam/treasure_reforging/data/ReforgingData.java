@@ -32,9 +32,9 @@ public class ReforgingData {
 
         // Server Data
         generator.addProvider(event.includeServer(), new ReforgingRegistrySets(packOutput, lookupProvider));
-        generator.addProvider(event.includeServer(), new ReforgingRecipeData(packOutput));
-        generator.addProvider(event.includeServer(), ReforgingLootTableData.create(packOutput));
-        generator.addProvider(event.includeServer(), new ReforgingLootModifierData(packOutput));
+        generator.addProvider(event.includeServer(), new ReforgingRecipeData(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), ReforgingLootTableData.create(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new ReforgingLootModifierData(packOutput, lookupProvider));
         ReforgingBlockTagData blockTags = new ReforgingBlockTagData(packOutput, lookupProvider, fileHelper);
         generator.addProvider(event.includeServer(), blockTags);
         generator.addProvider(event.includeServer(), new ReforgingItemTagData(packOutput, lookupProvider, blockTags.contentsGetter(), fileHelper));

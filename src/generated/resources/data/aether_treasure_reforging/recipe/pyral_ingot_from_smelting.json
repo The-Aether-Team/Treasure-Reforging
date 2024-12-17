@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "pyral_ingot_from_smelting",
+  "ingredient": [
+    {
+      "item": "aether:phoenix_boots"
+    },
+    {
+      "item": "aether:phoenix_leggings"
+    },
+    {
+      "item": "aether:phoenix_chestplate"
+    },
+    {
+      "item": "aether:phoenix_helmet"
+    },
+    {
+      "item": "aether:phoenix_gloves"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "aether_treasure_reforging:pyral_ingot"
+  }
+}

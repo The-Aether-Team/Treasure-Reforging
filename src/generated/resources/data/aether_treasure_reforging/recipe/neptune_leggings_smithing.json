@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "aether_treasure_reforging:neptune_mesh"
+  },
+  "base": {
+    "item": "aether:zanite_leggings"
+  },
+  "result": {
+    "count": 1,
+    "id": "aether:neptune_leggings"
+  },
+  "template": {
+    "item": "aether_treasure_reforging:neptune_upgrade_smithing_template"
+  }
+}
