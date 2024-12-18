@@ -1,5 +1,6 @@
 package com.aetherteam.treasure_reforging.data.providers;
 
+import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.nitrogen.data.providers.NitrogenRecipeProvider;
 import com.aetherteam.treasure_reforging.TreasureReforging;
@@ -19,7 +20,7 @@ public abstract class ReforgingRecipeProvider extends NitrogenRecipeProvider {
 
     public void copyDungeonSmithingTemplate(RecipeOutput recipeOutput, ItemLike result, ItemLike baseItem) {
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result, 2)
-                .define('#', AetherBlocks.ENCHANTED_GRAVITITE.get())
+                .define('#', AetherTags.Items.PROCESSED_GRAVITITE)
                 .define('C', baseItem)
                 .define('S', result)
                 .pattern("#S#")
