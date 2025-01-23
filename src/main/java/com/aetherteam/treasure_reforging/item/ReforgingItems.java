@@ -1,5 +1,7 @@
 package com.aetherteam.treasure_reforging.item;
 
+import com.aetherteam.aetherfabric.registries.DeferredItem;
+import com.aetherteam.aetherfabric.registries.DeferredRegister;
 import com.aetherteam.treasure_reforging.TreasureReforging;
 import com.aetherteam.treasure_reforging.item.materials.PyralShardItem;
 import net.minecraft.ChatFormatting;
@@ -8,8 +10,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SmithingTemplateItem;
-import net.neoforged.neoforge.registries.DeferredItem;
-import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.List;
 

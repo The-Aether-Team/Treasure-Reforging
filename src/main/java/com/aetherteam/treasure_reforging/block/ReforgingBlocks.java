@@ -1,6 +1,8 @@
 package com.aetherteam.treasure_reforging.block;
 
 import com.aetherteam.aether.block.miscellaneous.FacingPillarBlock;
+import com.aetherteam.aetherfabric.registries.DeferredBlock;
+import com.aetherteam.aetherfabric.registries.DeferredRegister;
 import com.aetherteam.treasure_reforging.TreasureReforging;
 import com.aetherteam.treasure_reforging.item.ReforgingItems;
 import net.minecraft.world.item.BlockItem;
@@ -9,8 +11,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
-import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.Objects;
 import java.util.function.Function;
