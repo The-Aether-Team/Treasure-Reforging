@@ -1,7 +1,7 @@
 package com.aetherteam.treasure_reforging.recipe;
 
-import com.aetherteam.aetherfabric.registries.DeferredHolder;
-import com.aetherteam.aetherfabric.registries.DeferredRegister;
+import com.aetherteam.nitrogen.fabric.registries.DeferredHolder;
+import com.aetherteam.nitrogen.fabric.registries.DeferredRegister;
 import com.aetherteam.treasure_reforging.TreasureReforging;
 import com.aetherteam.treasure_reforging.recipe.recipes.PhoenixArmorRecipe;
 import net.minecraft.core.registries.Registries;

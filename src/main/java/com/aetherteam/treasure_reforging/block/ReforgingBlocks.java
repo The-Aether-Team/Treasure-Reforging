@@ -1,8 +1,8 @@
 package com.aetherteam.treasure_reforging.block;
 
 import com.aetherteam.aether.block.miscellaneous.FacingPillarBlock;
-import com.aetherteam.aetherfabric.registries.DeferredBlock;
-import com.aetherteam.aetherfabric.registries.DeferredRegister;
+import com.aetherteam.nitrogen.fabric.registries.DeferredBlock;
+import com.aetherteam.nitrogen.fabric.registries.DeferredRegister;
 import com.aetherteam.treasure_reforging.TreasureReforging;
 import com.aetherteam.treasure_reforging.item.ReforgingItems;
 import net.minecraft.world.item.BlockItem;

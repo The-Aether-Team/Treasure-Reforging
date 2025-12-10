@@ -1,7 +1,7 @@
 package com.aetherteam.treasure_reforging.item;
 
-import com.aetherteam.aetherfabric.registries.DeferredItem;
-import com.aetherteam.aetherfabric.registries.DeferredRegister;
+import com.aetherteam.nitrogen.fabric.registries.DeferredItem;
+import com.aetherteam.nitrogen.fabric.registries.DeferredRegister;
 import com.aetherteam.treasure_reforging.TreasureReforging;
 import com.aetherteam.treasure_reforging.item.materials.PyralShardItem;
 import net.minecraft.ChatFormatting;
